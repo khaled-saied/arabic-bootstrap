@@ -1,0 +1,293 @@
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&family=Tajawal:wght@400;700;900&family=Ubuntu:ital@1&family=Varela+Round&display=swap');
+
+:root{
+    --maincolor:#ffc527;
+}
+
+body{
+    direction: rtl;
+    font-family: "Tajawal",sans-serif;
+    text-align: right;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.section__title{
+    position: relative;
+    display: inline-block; /*عشان الخط يكون علي قد الكلام*/
+}
+
+.section__title::after{
+    content: "";
+    height: 5px;
+    width: 120px;
+    display: block;
+    background-color: var(--maincolor);
+    position: absolute;
+    bottom: -10px;
+}
+
+.section{
+    padding: 80px 0;
+}
+
+.navbar{
+    box-shadow: 1px 2px 5px #ebebeb;
+}
+
+/* Home */
+
+.home{
+    height: 600px;
+    background-size: cover;
+    background-image: url(../Images/slide-bg-1.jpg);
+    padding: 1px;
+}
+
+.home-item{
+    width: 50%;
+    margin-right: auto;
+    margin-top: 15%;
+}
+
+@media(max-width: 768px){
+    .home{
+        height: 400px;
+    }
+    .home-item{
+        width: 100%;
+    }
+}
+
+.home-item h2{
+    color: #fff;
+    font-size: 45px;
+}
+
+.home-item p{
+    color: #fff;
+    font-size: 20px;
+}
+
+/* About */
+
+.next-slide:hover{
+    background-color: yellow;
+}
+
+.about__item p{
+    margin: 50px 0;
+}
+
+.about__item button{
+    margin-bottom: 15px;
+}
+
+/* News */
+
+.news .news-left,
+.footer-left{
+    display: flex;
+    align-items: center;
+}
+
+.news .news-left img,
+.footer-left img{
+    max-width: 200px;
+    margin-left: 10px;
+}
+
+/* Heart */
+.heart .heart-icon{
+    background-color: rgb(255 177 0);
+    width: 70px;
+    height: 70px;
+    padding: 25px 18px;
+    border-radius: 50%;
+}
+
+/* Profile */
+
+.profile .profile-icon img{
+    width: 127px;
+    height: 135px;
+    padding: 25px 18px;
+    border-radius: 50%;
+    margin: -19px -23px;
+}
+
+.profile-text p{
+    /* font-style:italic; */
+    vertical-align: inherit;
+}
+
+/* Subscribe */
+
+.subscribe{
+    height: 450px;
+    background-image: url(../Images/subscribe-our-newsletter-bg.jpg);
+    background-size: cover;
+    padding: 1px;  /*عشان الصوره متنزلش لتحت خالص*/
+    position: relative;
+}
+
+.subscribe__item{
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #ffff;
+}
+
+.subscribe__item h2{
+    font-size: 40px;
+}
+
+.subscribe__item .form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.subscribe__item .form input{
+    width: 80%;
+    border-radius: 20px;
+}
+
+.subscribe__item .form button{
+    width: 15%;
+}
+
+@media(max-width:768){
+    .subscribe__item .form{
+        flex-direction:column;
+    }
+    .subscribe__item{
+        width: 80%;
+    }
+    .subscribe__item .form input{
+        width: 100%;
+        border-radius: 20px;
+    }
+    
+    .subscribe__item .form button{
+        width: 100%;
+    }
+}
+
+/* Footer */
+
+footer{
+    background-color: #071c33;
+    color: #fff;
+}
+
+footer h3{
+    background-color: #fff;
+    color: #222;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 0 10px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+
+footer ul li a{
+    text-decoration: none;
+}
+
+.footer-left{
+    font-size: 12px;
+}
+
+.footer-left img{
+    width: 50px;
+}
+
+.footer-input input{
+    width: 180px;
+    height: 30px;
+    border-radius: 20px;
+    outline: 0;
+    border: 0;
+}
+
+.footer-input button{
+    height: 30px;
+    width: 80px;
+    padding: 2px;
+    border-radius: 50px;
+}
+
+
+/* -------------------------------------------------------------------------------------------------------- */
+/* المدونه  blog */
+
+.breadcrumb{
+    margin: 0;
+    justify-content: flex-end;
+}
+
+.breadcrumb + .breadcrumb-item::before{
+    float: right;
+}
+
+.blog .jumbotron{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--maincolor);
+}
+
+.blog .jumbotron .blog-desc{
+    width: 55%;
+}
+
+.blog .jumbotron .blog-desc h2{
+    font-size: 18px;
+}
+
+.blog .jumbotron .blog-img{
+    width: 40%;
+}
+/* -------------------------------------------------------------------------------------------------------- */
+
+/* Blog__Details */
+
+
+/*  Blog*/
+.blog .jumbotron .blog-det-desc{
+    width: 100%;
+}
+
+.blog .jumbotron .blog-det-desc h2{
+    font-size: 18px;
+}
+
+.blog .jumbotron .blog-det-img{
+    width: 100%;
+}
+
+/* Comment */
+
+.comment-item img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+
+.comment-input button{
+    width: 100%;
+    background-color:#ff9500;
+    margin-top: 40px;
+}
+
+.comment-input button:hover{
+    background: rgb(61, 60, 60);
+}
